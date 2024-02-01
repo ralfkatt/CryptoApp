@@ -115,7 +115,7 @@ class CryptoListViewModelTests: XCTestCase {
             }
             .store(in: &cancellables)
         
-        cryptoListViewModel?.showSekCurrency(cryptos: [cryptos])
+        cryptoListViewModel?.changeToSek(cryptos: [cryptos])
         
         wait(for: [expectation], timeout: 5.0)
     }
@@ -137,7 +137,7 @@ class CryptoListViewModelTests: XCTestCase {
         cryptoListViewModel.cryptos = [cryptos]
         
         
-        cryptoListViewModel?.showSekCurrency(cryptos: [cryptos])
+        cryptoListViewModel?.changeToSek(cryptos: [cryptos])
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             guard let resultingCrypto = self.cryptoListViewModel.cryptos.first else {

@@ -9,7 +9,7 @@ struct WalletItemView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             Text(crypto.symbol)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            Text(String(crypto.askPrice))
+            PriceWithCurrencyView(price: crypto.askPrice)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
