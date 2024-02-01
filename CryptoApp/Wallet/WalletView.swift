@@ -20,7 +20,7 @@ struct WalletView: View {
                         .bold()
                         .foregroundStyle(.white)
                     }
-                    ForEach(walletViewModel.cryptos) { crypto in
+                    ForEach(Array(walletViewModel.cryptos.enumerated()), id: \.offset) { _, crypto in
                         WalletItemView(crypto: crypto)
                         Divider()
                     }
