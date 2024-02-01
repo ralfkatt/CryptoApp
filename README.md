@@ -1,4 +1,4 @@
-## An app displays a list of crypto currencies
+## CryptoApp is an app that displays a list of crypto currencies
 Features include:
 - Scrolling through the list of cryptos.
 - Tap on the row to see the details page, where more information is included.
